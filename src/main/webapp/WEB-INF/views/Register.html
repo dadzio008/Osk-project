@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HomePage</title>
+    <title>Register</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback}">
     <!-- Font Awesome -->
@@ -18,7 +18,6 @@
     <link rel="stylesheet" th:href ="@{plugins/jqvmap/jqvmap.min.css}">
     <!-- Theme style -->
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <link rel="stylesheet" th:href="@{/resources/css/HomePage.css}">
     <link rel="stylesheet" th:href="@{/css/HomePage.css}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
@@ -43,19 +42,36 @@
         </div>
 
         <!-- Login Form -->
-        <form class="user" method="post" th:action="@{/HomePage}">
-            <input type="text" id="login" class="fadeIn second col-12" name="username" placeholder="login">
-            <input type="password" id="password" class="fadeIn third col-12" name="password" placeholder="password">
-            <input type="submit" class="btn btn-success col-12" value="Log In">
+        <form name="sendSaveAdmin" method="post" th:action="@{/Register}">
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <input type="text" name="surName" class="form-control form-control-user" id="exampleFirstName" placeholder="Imię">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="lastName" class="form-control form-control-user" id="exampleLastName" placeholder="Nazwisko">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="dateofBirth" class="form-control form-control-user" id="exampledateBirth" placeholder="Data Urodzenia">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="userName" class="form-control form-control-user" id="exampleLogin" placeholder="Login">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="password" class="form-control form-control-user" id="examplepassword" placeholder="Hasło">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="phoneNumber" class="form-control form-control-user" id="examplephonenumber" placeholder="Numer Telefonu">
+                </div>
+                <div class="col-sm-12">
+                    <input type="text" name="address" class="form-control form-control-user" id="exampleaddress" placeholder="Adres Zamieszkania">
+                </div>
 
+            </div>
 
+            <input class="btn btn-success" type="submit" value="Rejestruj">
+            <hr>
 
         </form>
-        <a th:href="@{/Register}" class="btn btn-outline-info" id="button">Register</a>
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
 
     </div>
 </div>
